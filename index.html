@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Order summary card</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      @font-face {
+        font-family: "face";
+        src: url(Red_Hat_Display/RedHatDisplay-VariableFont_wght.ttf);
+      }
+      body {
+        height: 100vh;
+        font-family: "face";
+        background: hsl(225, 100%, 94%);
+        background-image: url(images/pattern-background-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        justify-content: center;
+        align-items: center;
+        
+      }
+      body , .kk , .muzic , .cancel , .music-text{
+        display: flex;
+        
+      }
+      .card {
+        background: hsl(225, 100%, 98%);
+        border-radius: 15px;
+        max-width:375px;
+        margin: 0 1.2rem;
+      }
+      .img {
+        width: 100%;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+      }
+      .text {
+        text-align: center;
+      }
+      .p {
+        font-size: 16px;
+        color: hsl(224, 23%, 55%);
+      }
+      .music-text {
+        flex-direction: column;
+        padding-left: .7rem;
+      }
+      .muzic , .btn{
+        margin-top: 1.3rem ;
+      }
+      .title{
+        margin: 1.3rem 0;
+        font-weight: bold;
+        color: hsl(223, 47%, 23%);
+      }
+      .muzic , .btn{
+        background: hsl(228, 100%, 96%);
+        padding: 1rem 1rem;
+        border-radius: 10px;
+        justify-content: space-between;
+      }
+      section {
+        padding: 0 1rem;
+      }
+      .a,.icon {
+        display: flex;
+        align-items: center;
+      }
+      .music-title,
+      .a {
+        font-weight: bold;
+        transition: 500ms;
+      }
+      .btn{
+        border: 0;
+        width: 100%;
+        background: hsl(245, 75%, 52%);
+        color: aliceblue;
+        font-weight: bold;
+        transition: 500ms;
+        
+        
+      }
+      .cancel{
+        margin: 1.3rem 0 1.3rem 0;
+        color:hsl(224, 23%, 55%);;
+        font-weight: bold;
+        text-decoration: none;
+        justify-content: center;
+      }
+      .cancel:hover{
+        color:hsl(223, 47%, 23%); 
+        transition: 500ms;
+      }
+      @media only screen and (max-width: 375px) {
+        body{
+          background-image:url(images/pattern-background-mobile.svg) ;
+        }
+      }
+      .btn:hover {
+        background: hsl(245, 76%, 61%);
+      }
+      a:hover{
+        color:hsl(245, 76%, 61%); ;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <img src="images/illustration-hero.svg" class="img" alt="" />
+      <section>
+        <div class="text">
+          <h1 class="title">Order Summary</h1>
+          <p class="p">
+            you can now listen to millions of songs audiobooks,and podcasts on
+            any device anywhere you like!
+          </p>
+        </div>
+        <div class="muzic">
+          <div class="icon">
+            <img src="images/icon-music.svg" alt="" />
+            <div class="music-text">
+              <span class="music-title">Annual plan</span>
+              <span>$59.99/year</span>
+            </div>
+          </div>
+          <a href="#" class="a">Change</a>
+        </div>
+        <button class="btn">Proceed to payment</button>
+        <a href="#" class="cancel">Cancel Order</a>
+      </section>
+    </div>
+  </body>
+</html>
